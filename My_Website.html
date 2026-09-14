@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <!-- Essential for mobile app layout -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Nathan's IT Support</title>
+
+    <link rel="stylesheet" href="My_Website.css">
+    <script src="My_Website.js" defer></script>
+</head>
+<body>
+
+    <div class="background-icons">
+    <span>💻</span>
+    <span>🖥️</span>
+    <span>⌨️</span>
+    <span>🖱️</span>
+    <span>⚙️</span>
+    <span>🛠️</span>
+    <span>🌐</span>
+    <span>📡</span>
+</div>
+
+    <main class="card">
+
+        <img src="nc.jpg"
+             alt="Photo of Nathan"
+             class="profile-pic">
+
+        <h1>Nathan's IT Support</h1>
+
+        <p>
+            Professional support for computers, laptops,
+            software, networking and troubleshooting.
+        </p>
+
+        <button onclick="toggleForm()">
+            Contact Support
+        </button>
+
+        <form id="supportForm"
+      action="https://formsubmit.co/nathan.c31@colc.ac.uk"
+      method="POST">
+
+    <!-- Email subject -->
+    <input type="hidden"
+           name="_subject"
+           value="New IT Support Request">
+
+    <!-- Disable captcha -->
+    <input type="hidden"
+           name="_captcha"
+           value="false">
+
+    <!-- Redirect to thank-you page -->
+    <input type="hidden"
+           name="_next"
+           value="http://127.0.0.1:5500/thankyou.html">
+
+    <input type="text"
+           name="name"
+           placeholder="Your Name"
+           required>
+
+    <input type="email"
+           name="email"
+           placeholder="Your Email"
+           required>
+
+    <textarea name="issue"
+              placeholder="Describe your issue"
+              required></textarea>
+
+    <button type="submit">
+        Send Request
+    </button>
+
+</form>
+
+        <p id="message"></p>
+
+    </main>
+
+    <footer>
+        <p>&copy; <span id="year"></span> Nathan's IT Support</p>
+    </footer>
+
+</body>
+</html>
